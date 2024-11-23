@@ -10,6 +10,67 @@ package proyecto;
  */
 public class Proceso {
     private int id;
-    private int []recursos;
+    private String nombre;
+    private int []necesidades;
+    private int priority;
+
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the necesidades
+     */
+    public int[] getNecesidades() {
+        return necesidades;
+    }
+
+    /**
+     * @param necesidades the necesidades to set
+     */
+    public void setNecesidades(int[] necesidades) {
+        this.necesidades = necesidades;
+    }
+
+    /**
+     * @return the priority
+     */
+    public int getPriority() {
+        return priority;
+    }
+
+    /**
+     * @param priority the priority to set
+     */
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+    
+    
+    
     
 }
