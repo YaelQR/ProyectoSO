@@ -13,6 +13,7 @@ public class Proceso {
     private String nombre;
     private int []necesidades;
     private int priority;
+    private int []asignacion;
 
     /**
      * @return the id
@@ -53,7 +54,7 @@ public class Proceso {
      * @param necesidades the necesidades to set
      */
     public void setNecesidades(int[] necesidades) {
-        this.necesidades = necesidades;
+        this.setNecesidades(necesidades);
     }
 
     /**
@@ -68,6 +69,20 @@ public class Proceso {
      */
     public void setPriority(int priority) {
         this.priority = priority;
+    }
+
+    /**
+     * @return the asignacion
+     */
+    public int[] getAsignacion() {
+        return asignacion;
+    }
+
+    /**
+     * @param asignacion the asignacion to set
+     */
+    public void setAsignacion(int[] asignacion) {
+        this.asignacion = asignacion;
     }
     
     
