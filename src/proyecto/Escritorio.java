@@ -156,8 +156,16 @@ public class Escritorio {
         return recursos;
     }
     
-    public void recuperacionD(){
+    public void recuperacionD(boolean []procesosSA){
         
+        int p;
+        int min;
+        
+        for(int i=0; i<procesosSA.length; i++){
+            if( !(procesosSA[i]) ){
+                
+            }
+        }
         
         
     }
