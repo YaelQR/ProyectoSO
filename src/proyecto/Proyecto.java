@@ -14,7 +14,29 @@ public class Proyecto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        int []recursos={2,1,1,2,1};
+        int []disponibles={0,0,0,0,1};
+        int [][]solicitud={
+            {0,1,0,0,1},
+            {0,0,1,0,1},
+            {0,0,0,0,1},
+            {1,0,1,0,1}
+        };
+        
+        int [][]asignacion={
+            {1,0,1,1,0},
+            {1,1,0,0,0},
+            {0,0,0,1,0},
+            {0,0,0,0,0}
+        };
+        
+        Proceso []listos=new Proceso[5];
+        
+        Escritorio escritorio1=new Escritorio(recursos,disponibles,solicitud,asignacion,listos);
+        escritorio1.deteccion();
+        
+        
     }
     
 }
