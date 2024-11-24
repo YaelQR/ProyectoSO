@@ -66,22 +66,22 @@ public class Escritorio {
     public boolean []marcar(boolean []procesosSA){
         boolean flag;
         
-        for(int i=0; i<procesosSA.length; i++){
-            procesosSA[i]=false;
-        }
-        
         for(int i=0; i<asignacion.length; i++){
-            flag=true;
-            for(int j=0; j<asignacion[i].length; j++){
-                if(asignacion[i][j]>0){
-                    flag=false;
-                    break;
-                }    
-            }
-            procesosSA[i]=flag;
             
-            //String res = (flag)? "Proceso "+i+" se marco":"Proceso "+i+" no se marco"; //Eliminar
-            //System.out.println(res); //Eliminar
+            if( !(procesosSA[i]) ){
+               flag=true;
+                for(int j=0; j<asignacion[i].length; j++){
+                    if(asignacion[i][j]>0){
+                        flag=false;
+                        break;
+                    }    
+                }
+                procesosSA[i]=flag;
+
+                //String res = (flag)? "Proceso "+i+" se marco":"Proceso "+i+" no se marco"; //Eliminar
+                //System.out.println(res); //Eliminar 
+            }
+            
         }
         return procesosSA;
     }
@@ -149,10 +149,17 @@ public class Escritorio {
     //Recuperar recursos de un proceso
     public int []recuperaRecursos(int p, int []recursos){
         
-        
-        
+        for(int j=0; j<asignacion[p].length; j++){
+            recursos[j]+=asignacion[p][j];
+        }
         
         return recursos;
+    }
+    
+    public void recuperacionD(){
+        
+        
+        
     }
     
     
