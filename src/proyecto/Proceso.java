@@ -15,6 +15,27 @@ public class Proceso {
     private int priority;
     private int []asignacion;
 
+    public Proceso() {
+    }
+
+    public Proceso(int id, String nombre, int[] necesidades, int priority, int[] asignacion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.necesidades = necesidades;
+        this.priority = priority;
+        this.asignacion = asignacion;
+    }
+
+    public Proceso(String nombre, int[] necesidades, int priority, int[] asignacion) {
+        this.nombre = nombre;
+        this.necesidades = necesidades;
+        this.priority = priority;
+        this.asignacion = asignacion;
+    }
+    
+    
+    
+    
     /**
      * @return the id
      */
